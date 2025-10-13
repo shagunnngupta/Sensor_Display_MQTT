@@ -1,0 +1,24 @@
+```
+┌───────────────────────────────────────────────┐
+│                ESP32 MCU                      │
+└─────────────┬─────────────┬─────────────────┬─┘
+              │             │                 │
+              ▼             ▼                 ▼
+┌─────────────────┐ ┌───────────────┐ ┌───────────────┐
+│   BME280 Sensor │ │ ST7789 Display│ │   WiFi/MQTT   │
+│   Custom Driver │ │    Interface  │ │ Communication │
+└────────┬────────┘ └───────┬───────┘ └───────┬───────┘
+         │                  │                 │
+         ▼                  ▼                 ▼
+┌─────────────────┐ ┌───────────────┐ ┌───────────────┐
+│  Temperature    │ │  Dashboard UI │ │   MQTT Broker │
+│  Humidity       │ │  - Data view  │ │  - Publish    │
+│  Pressure       │ │  - Status     │ │  - Subscribe  │
+└─────────────────┘ └───────────────┘ └───────────────┘
+
+Data Flow:
+1. BME280 Sensor -> Raw data -> Custom Driver -> Processed Values
+2. Processed Values -> Display Interface -> Dashboard UI
+3. Processed Values -> MQTT Communication -> MQTT Broker
+4. MQTT Broker -> Commands -> ESP32 -> Actions (LED, Display)
+```
