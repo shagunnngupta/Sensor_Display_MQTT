@@ -84,15 +84,3 @@ Using the PubSubClient library for MQTT communication:
 3. **MQTT Reliability**:
    - Handling connection failures gracefully
    - Managing reconnection attempts while keeping the system responsive
-
-## Future Improvements
-
-1. Add support for OTA updates
-2. Implement more interactive UI elements
-3. Add data logging capability to SD card or SPIFFS
-4. Improve error handling and recovery mechanisms
-5. Add power management for battery operation
-
-## License
-
-This project is open-source and available under the MIT License.
