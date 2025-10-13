@@ -1,0 +1,79 @@
+System Boot Log - ESP32 BME280 MQTT Demo
+========================================
+
+[10:15:00] System initialization...
+[10:15:01] CPU Frequency: 240MHz
+[10:15:01] Flash Size: 4MB
+[10:15:01] Free Heap: 259072 bytes
+[10:15:01] SDK Version: v4.4.4
+
+[10:15:02] Initializing WiFi...
+[10:15:02] Connecting to WiFi SSID: HomeNetwork
+[10:15:04] WiFi connected
+[10:15:04] IP address: 192.168.1.100
+[10:15:04] Signal strength: -65 dBm
+
+[10:15:05] Initializing I2C bus...
+[10:15:05] SDA: GPIO 21
+[10:15:05] SCL: GPIO 22
+[10:15:05] Clock: 400000 Hz
+[10:15:05] I2C initialized successfully
+
+[10:15:06] Initializing BME280 sensor...
+[10:15:06] BME280 found at I2C address 0x76
+[10:15:06] BME280 chip ID: 0x60 (correct)
+[10:15:06] Reading calibration data...
+[10:15:07] BME280 initialized successfully
+[10:15:07] Forced mode set, oversampling: temp x1, pressure x1, humidity x1
+
+[10:15:08] Initializing TFT display...
+[10:15:08] Display: ST7789 240x240
+[10:15:08] CS: GPIO 5, DC: GPIO 16, RST: GPIO 17
+[10:15:08] Display initialized successfully
+[10:15:09] Display brightness set to 80%
+
+[10:15:10] Initializing MQTT client...
+[10:15:10] Broker: mqtt.eclipseprojects.io
+[10:15:10] Port: 1883
+[10:15:10] Client ID: ESP32_BME280_Client
+[10:15:10] Connecting to MQTT broker...
+[10:15:12] MQTT connected
+[10:15:12] Subscribing to control topics...
+[10:15:12] Subscribed to control/led
+[10:15:12] Subscribed to control/display
+[10:15:12] Subscribed to control/reset
+
+[10:15:13] System initialization complete
+[10:15:13] Starting main loop...
+
+[10:15:23] Reading sensors...
+[10:15:23] Temperature: 22.5 C
+[10:15:23] Humidity: 58.2 %
+[10:15:23] Pressure: 1013.4 hPa
+[10:15:23] Altitude: 110.3 m
+[10:15:23] Publishing sensor data...
+[10:15:24] Updating display...
+
+[10:16:05] MQTT message received on topic: control/led
+[10:16:05] Message: ON
+[10:16:05] Setting LED state to ON
+
+[10:16:15] MQTT message received on topic: control/display
+[10:16:15] Message: {"brightness":80,"refresh_rate":5}
+[10:16:15] Updating display settings
+[10:16:15] Display brightness set to 80%
+[10:16:15] Display refresh rate set to 5 seconds
+
+[10:17:02] MQTT message received on topic: control/reset
+[10:17:02] Message: true
+[10:17:02] System reset initiated
+[10:17:02] Disconnecting from MQTT...
+[10:17:02] Publishing last will message
+[10:17:02] Disconnecting from WiFi...
+[10:17:03] Resetting system in 3...
+[10:17:04] Resetting system in 2...
+[10:17:05] Resetting system in 1...
+[10:17:06] SYSTEM RESET
+
+Note: This log represents a simulation of the system operation. In a real system with hardware,
+these would be actual log entries from the ESP32.

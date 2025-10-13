@@ -1,0 +1,27 @@
+This is a text representation of what would be shown on the ST7789 display.
+Since we can't provide a real image file in text format, please imagine this as
+a 240x240 pixel color display with the following content:
+
+┌────────────────────────────────────┐
+│          BME280 Sensor            │
+├────────────────────────────────────┤
+│                                    │
+│ WiFi: Connected                    │
+│ IP: 192.168.1.100                  │
+│                                    │
+│ BME280: OK                         │
+│                                    │
+│ MQTT: Connected                    │
+│                                    │
+│ Temperature: 22.5 °C               │
+│ Humidity: 58.2 %                   │
+│ Pressure: 1013.4 hPa               │
+│                                    │
+│ LED Status: ON                     │
+│                                    │
+│            [RESET]                 │
+│                                    │
+└────────────────────────────────────┘
+
+Note: In a real submission with hardware, this would be an actual screenshot
+from the display. For simulation purposes, we've provided this text representation.

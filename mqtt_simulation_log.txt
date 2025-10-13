@@ -1,0 +1,52 @@
+MQTT Communication Log
+====================
+
+Connection established to broker: mqtt.eclipseprojects.io
+Client ID: ESP32_BME280_Client
+QoS: 1
+
+Published Topics:
+----------------
+Topic: sensor/temperature
+Message: 22.5
+Timestamp: 2023-10-13T10:15:23
+
+Topic: sensor/humidity
+Message: 58.2
+Timestamp: 2023-10-13T10:15:23
+
+Topic: sensor/pressure
+Message: 1013.4
+Timestamp: 2023-10-13T10:15:23
+
+Topic: sensor/status
+Message: {"device":"ESP32","sensor":"BME280","status":"OK","wifi_strength":-65,"battery":95}
+Timestamp: 2023-10-13T10:15:24
+
+Subscribed Topics:
+----------------
+Topic: control/led
+Message received: ON
+Timestamp: 2023-10-13T10:16:05
+Action taken: Turned on LED
+
+Topic: control/display
+Message received: {"brightness":80,"refresh_rate":5}
+Timestamp: 2023-10-13T10:16:15
+Action taken: Updated display settings
+
+Topic: control/reset
+Message received: true
+Timestamp: 2023-10-13T10:17:02
+Action taken: System reset initiated
+
+Connection Statistics:
+--------------------
+Packets sent: 27
+Packets received: 15
+Connection uptime: 00:05:23
+Last will topic: sensor/status
+Last will message: {"device":"ESP32","sensor":"BME280","status":"OFFLINE"}
+
+Note: This log represents a simulation of MQTT communication. In a real system with hardware,
+these would be actual MQTT messages captured from the network.
